@@ -48,16 +48,12 @@ export const siteConfig = {
         href: '/blog',
       },
       {
-        text: 'Notes',
-        href: '/blog/notes',
+        text: 'About',
+        href: '/about',
       },
       {
-        text: 'Talks',
-        href: '/blog/talks',
-      },
-      {
-        text: 'Projects',
-        href: '/projects',
+        text: 'AI Projects',
+        href: '/ai-projects',
       },
     ],
   },

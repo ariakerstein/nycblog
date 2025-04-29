@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: ariakerstein/astropaper
+  branch: main
+
+media_folder: public/assets
+public_folder: /assets
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Description, name: description, widget: string}
+      - {label: Date, name: date, widget: datetime}
+      - {label: Draft, name: draft, widget: boolean, default: true}
+      - {label: Featured Image, name: ogImage, widget: image, required: false}
+      - {label: Tags, name: tags, widget: list, default: [uncategorized]}
+      - {label: Body, name: body, widget: markdown}
+  - name: pages
+    label: Pages
+    folder: src/pages
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Description, name: description, widget: string}
+      - {label: Draft, name: draft, widget: boolean, default: true}
+      - {label: Date, name: date, widget: datetime, required: false}
+      - {label: Body, name: body, widget: markdown}
