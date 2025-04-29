@@ -1,4 +1,7 @@
 ---
+if (Astro.url.pathname.startsWith('/admin')) {
+  return
+}
 import { getCollection } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import type { CollectionPages } from '@/types'
